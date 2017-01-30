@@ -1,31 +1,8 @@
 # laravel-bulma-starter
 
-A quick replacement for Laravel's basic templates, built with Bulma
+A quick replacement for Laravel's basic templates, built with Bulma. It requires Laravel >= 5.4
 
-[![Latest Version on Packagist][ico-version]][link-packagist]
-[![Software License][ico-license]](LICENSE.md)
-[![Build Status][ico-travis]][link-travis]
-[![Coverage Status][ico-scrutinizer]][link-scrutinizer]
-[![Quality Score][ico-code-quality]][link-code-quality]
-[![Total Downloads][ico-downloads]][link-downloads]
-
-**Note:** Replace ```Jean-Philippe Murray``` ```jpmurray``` ```http://atomescroch.us``` ```jp@atomescroch.us``` ```atomescrochus``` ```laravel-bulma-starter``` ```A quick replacement for Laravel's basic templates, built with Bulma``` with their correct values in [README.md](README.md), [CHANGELOG.md](CHANGELOG.md), [CONTRIBUTING.md](CONTRIBUTING.md), [LICENSE.md](LICENSE.md) and [composer.json](composer.json) files, then delete this line. You can run `$ php prefill.php` in the command line to make all replacements at once. Delete the file prefill.php as well.
-
-This is where your description should go. Try and limit it to a paragraph or two, and maybe throw in a mention of what
-PSRs you support to avoid any confusion with users and contributors.
-
-## Structure
-
-If any of the following are applicable to your project, then the directory structure should follow industry best practises by being named the following.
-
-```
-bin/        
-config/
-src/
-tests/
-vendor/
-```
-
+**NOT USABLE IN PRODUCTION YET**
 
 ## Install
 
@@ -37,20 +14,32 @@ $ composer require atomescrochus/laravel-bulma-starter
 
 ## Usage
 
-``` php
-$skeleton = new Atomescrochus\LaravelBulmaStarter();
-echo $skeleton->echoPhrase('Hello, League!');
+1. Add `"bulma": "^0.3.1"` to your `package.json` file;
+2. Run `npm update`
+3. (If you don't want Boostrap anymore) Remove, or comment out the reference to `sass_bootstrap` and `variables` in your `resources/assets/sass/app.scss` file
+4. Add `@import "node_modules/bulma/bulma";` to the `resources/assets/sass/app.scss` file
+
+If I wanted, for example, to replace the main welcome file, I would open the one provided with Laravel, remove its content and add `@include('laravel-bulma-starter::welcome'])`. For the `auth.login` view, I'd add `@include('laravel-bulma-starter::auth.login'])`, and so on.
+
+_If you want to take a peak at the code, you can publish the package's files using `php artisan vendor:publish`._
+
+### Error display component
+
+The only real difference between this packages' views and Laravel's default, beside using Bulma, is that I use a custom component for errors. It can be used as such:
+
+```php
+// if using it in a "horizontal form"
+@include('laravel-bulma-starter::components.forms-errors', ['field' => 'nameOfField', 'type' => 'horizontal'])
+
+// or if in a regular form, just omit the type
+@include('laravel-bulma-starter::components.forms-errors', ['field' => 'nameOfField'])
 ```
+
+Of course, you are in now way forced to use the components outisde this package's views, but I find it really useful so give it a try!
 
 ## Change log
 
 Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
-
-## Testing
-
-``` bash
-$ composer test
-```
 
 ## Contributing
 
@@ -68,18 +57,3 @@ If you discover any security related issues, please email jp@atomescroch.us inst
 ## License
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
-
-[ico-version]: https://img.shields.io/packagist/v/atomescrochus/laravel-bulma-starter.svg?style=flat-square
-[ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
-[ico-travis]: https://img.shields.io/travis/atomescrochus/laravel-bulma-starter/master.svg?style=flat-square
-[ico-scrutinizer]: https://img.shields.io/scrutinizer/coverage/g/atomescrochus/laravel-bulma-starter.svg?style=flat-square
-[ico-code-quality]: https://img.shields.io/scrutinizer/g/atomescrochus/laravel-bulma-starter.svg?style=flat-square
-[ico-downloads]: https://img.shields.io/packagist/dt/atomescrochus/laravel-bulma-starter.svg?style=flat-square
-
-[link-packagist]: https://packagist.org/packages/atomescrochus/laravel-bulma-starter
-[link-travis]: https://travis-ci.org/atomescrochus/laravel-bulma-starter
-[link-scrutinizer]: https://scrutinizer-ci.com/g/atomescrochus/laravel-bulma-starter/code-structure
-[link-code-quality]: https://scrutinizer-ci.com/g/atomescrochus/laravel-bulma-starter
-[link-downloads]: https://packagist.org/packages/atomescrochus/laravel-bulma-starter
-[link-author]: https://github.com/jpmurray
-[link-contributors]: ../../contributors
