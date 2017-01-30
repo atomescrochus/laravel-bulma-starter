@@ -1,6 +1,8 @@
 # laravel-bulma-starter
 
-A quick replacement for Laravel's basic templates, built with Bulma
+A quick replacement for Laravel's basic templates, built with Bulma.
+
+**NOT USABLE IN PRODUCTION YET**
 
 [![Latest Version on Packagist][ico-version]][link-packagist]
 [![Software License][ico-license]](LICENSE.md)
