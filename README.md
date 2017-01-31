@@ -36,6 +36,8 @@ If you want to take a peak at the code, you can publish the package's files usin
 php artisan vendor:publish --provider="Atomescrochus\LaravelBulmaStarter\LaravelBulmaStarterServiceProvider" --tag="views"
 ```
 
+You'll find them in `resources/views/vendor/laravel-bulma-starter` and you can then use them as your regular view files: `@include('vendor.laravel-bulma-starter.welcome')`
+
 ### Error display component
 
 The only real difference between this packages' views and Laravel's default, beside using Bulma, is that I use a custom component for errors. It can be used as such:
