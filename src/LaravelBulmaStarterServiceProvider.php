@@ -24,7 +24,7 @@ class LaravelBulmaStarterServiceProvider extends ServiceProvider
         $this->loadViewsFrom(realpath(__DIR__.'/resources/views'), 'laravel-bulma-starter');
 
         $this->publishes([
-            __DIR__.'/resources/views' => resource_path('views/laravel-bulma-starter'),
+            __DIR__.'/resources/views' => resource_path('views/vendor/laravel-bulma-starter'),
         ], 'views');
     }
 
