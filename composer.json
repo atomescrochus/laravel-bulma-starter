@@ -4,7 +4,9 @@
     "description": "A quick replacement for Laravel's basic templates, built with Bulma",
     "keywords": [
         "atomescrochus",
-        "laravel-bulma-starter"
+        "laravel-bulma-starter",
+        "laravel",
+        "bulma"
     ],
     "homepage": "https://github.com/atomescrochus/laravel-bulma-starter",
     "license": "MIT",
