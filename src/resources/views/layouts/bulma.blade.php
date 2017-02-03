@@ -63,6 +63,8 @@
     </div>
 
     <!-- Scripts -->
+    @stack('scripts-before')
     <script src="{{ mix('js/app.js') }}"></script>
+    @stack('scripts-after')
 </body>
 </html>
