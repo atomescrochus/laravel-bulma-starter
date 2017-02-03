@@ -1,8 +1,8 @@
 # Bulma template starter kit for Laravel
 
-A quick replacement for Laravel's basic templates, built with Bulma. It requires Laravel >= 5.4
+A quick replacement for Laravel's basic templates, built with Bulma. It requires Laravel >= 5.4.
 
-[![Total Downloads](https://poser.pugx.org/atomescrochus/laravel-bulma-starter)](https://packagist.org/packages/atomescrochus/laravel-bulma-starter)
+[![Total Downloads](https://poser.pugx.org/atomescrochus/laravel-bulma-starter/downloads)](https://packagist.org/packages/atomescrochus/laravel-bulma-starter)
 
 ## Install
 
@@ -104,8 +104,8 @@ If you discover any security related issues, please email jp@atomescroch.us inst
 
 ## Credits
 
-- [Jean-Philippe Murray][link-author]
-- [All Contributors][link-contributors]
+- [Jean-Philippe Murray][https://github.com/jpmurray]
+- [All Contributors](../../contributors)
 
 ## License
 
