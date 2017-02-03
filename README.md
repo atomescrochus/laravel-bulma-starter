@@ -1,8 +1,8 @@
 # Bulma template starter kit for Laravel
 
-A quick replacement for Laravel's basic templates, built with Bulma. It requires Laravel >= 5.4
+A quick replacement for Laravel's basic templates, built with Bulma. It requires Laravel >= 5.4.
 
-[![Total Downloads](https://poser.pugx.org/atomescrochus/laravel-bulma-starter)](https://packagist.org/packages/atomescrochus/laravel-bulma-starter)
+[![Total Downloads](https://poser.pugx.org/atomescrochus/laravel-bulma-starter/downloads)](https://packagist.org/packages/atomescrochus/laravel-bulma-starter)
 
 ## Install
 
@@ -22,26 +22,62 @@ Then you have to install the package' service provider:
 ];
 ```
 
-## Usage
+Then, follow theses simple steps:
 
 1. Add `"bulma": "^0.3.1"` to your `package.json` file;
 2. Run `npm update`
-3. (If you don't want Boostrap anymore) Remove, or comment out the reference to `sass_bootstrap` and `variables` in your `resources/assets/sass/app.scss` file
+3. (If you don't want Boostrap anymore) Remove, or comment out the reference to `sass_bootstrap` and `variables` in your `resources/assets/sass/app.scss` file and from `resources/assets/js/bootstrap.js`.
 4. Add `@import "node_modules/bulma/bulma";` to the `resources/assets/sass/app.scss` file
-5. Run `npm run [your-choice-of-env]`
+5. Run `npm run [your-choice-of-env]` (the template files max uses of the `mix()` helper)
 
-If I wanted, for example, to replace the main welcome file, I would open the one provided with Laravel, remove its content and add `@include('laravel-bulma-starter::welcome')`. For the `auth.login` view, I'd add `@include('laravel-bulma-starter::auth.login')`, and so on.
-
+## Usage
+### Publish the package's view files
 If you want to take a peak at the code, you can publish the package's files using:
 
 ```bash
 php artisan vendor:publish --provider="Atomescrochus\LaravelBulmaStarter\LaravelBulmaStarterServiceProvider" --tag="views"
 ```
 
-You'll find them in `resources/views/vendor/laravel-bulma-starter` and you can then use them as your regular view files: `@include('vendor.laravel-bulma-starter.welcome')`
+You'll find them in `resources/views/vendor/laravel-bulma-starter`.
+
+### Replace Laravel default files
+If I wanted to replace the `welcome.blade.php` to the one provided in the package, I would just open the one provided with Laravel, and replace its content by `@include('laravel-bulma-starter::welcome')`. For the `auth.login` view, I'd use `@include('laravel-bulma-starter::auth.login')`, and so on.
+
+### Using the package default template by yourself
+Just create a new blade file and extend it with `@extends('laravel-bulma-starter::layouts.bulma')`.
+
+You can pass content to this layout file using
+
+```
+@section('content')
+Some content.
+@endsection
+```
+
+You can add elements to the top right menu as such
+
+```
+@push('right-nav-menu')
+    <a class="nav-item is-tab" href="{{ url('/some-link') }}">A menu item</a>
+    <a class="nav-item is-tab" href="{{ url('/some-other-link') }}">Another menu item</a>
+@endpush
+```
+
+If you need to add other scripts, or stylesheets, you can use some additionnal stacks (`scripts-before`, `scripts-after`, `styles-before` and `styles-after`) like so
+
+```
+@push('scripts-before')
+    <!-- This will be added right before the inclusion of app.js --> 
+    <!-- You still have to use the <script> tags here. -->
+@endpush
+
+@push('styles-before')
+    <!-- This will be added right before the inclusion of app.css --> 
+    <!-- You still have to use the <link> tags here. -->
+@endpush
+```
 
 ### Error display component
-
 The only real difference between this packages' views and Laravel's default, beside using Bulma, is that I use a custom component for errors. It can be used as such:
 
 ```php
@@ -68,8 +104,8 @@ If you discover any security related issues, please email jp@atomescroch.us inst
 
 ## Credits
 
-- [Jean-Philippe Murray][link-author]
-- [All Contributors][link-contributors]
+- [Jean-Philippe Murray][https://github.com/jpmurray]
+- [All Contributors](../../contributors)
 
 ## License
 

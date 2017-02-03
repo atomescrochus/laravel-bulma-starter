@@ -11,7 +11,9 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Styles -->
+    @stack('styles-before')
     <link href="{{ mix('/css/app.css') }}" rel="stylesheet">
+    @stack('styles-after')
 
     <!-- Scripts -->
     <script>
@@ -36,19 +38,7 @@
               <span></span>
             </span>
             <div class="nav-right nav-menu">
-                @if (Auth::guest())
-                    <a class="nav-item is-tab" href="{{ url('/login') }}">Login</a>
-                    <a class="nav-item is-tab" href="{{ url('/register') }}">Register</a>
-                @else
-                    <a class="nav-item is-tab" href="{{ url('/logout') }}"
-                    onclick="event.preventDefault();
-                    document.getElementById('logout-form').submit();">
-                        Logout</a>
-
-                    <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
-                        {{ csrf_field() }}
-                    </form>
-                @endif
+                @stack('right-nav-menu')
             </div>
           </div>
         </nav>
@@ -62,6 +52,8 @@
     </div>
 
     <!-- Scripts -->
+    @stack('scripts-before')
     <script src="{{ mix('js/app.js') }}"></script>
+    @stack('scripts-after')
 </body>
 </html>
