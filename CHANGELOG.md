@@ -4,6 +4,13 @@ All Notable changes to `laravel-bulma-starter` will be documented in this file.
 
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) principles.
 
+## 2.0.0 - 2017-02-03
+### Added
+- Added a layout file that you can extend that will not use the auth links in the menu.
+
+### Deprecated
+- The `layouts/app.blade.php` has been renamed `bulma.blade.php` for clarity's sake. `app` was a bit to generic. (**BREAKING CHANGE, SEE README.**)
+
 ## 1.0.4 - 2017-02-03
 - Lang property of the `<html>` tag is taken out of config, mimicking Laravel 5.4.8
 
