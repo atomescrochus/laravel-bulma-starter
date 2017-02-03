@@ -7,6 +7,7 @@ Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) princip
 ## 2.0.0 - 2017-02-03
 ### Added
 - Added a layout file that you can extend that will not use the auth links in the menu.
+- A stack to the layout file for menu.
 
 ### Deprecated
 - The `layouts/app.blade.php` has been renamed `bulma.blade.php` for clarity's sake. `app` was a bit to generic. (**BREAKING CHANGE, SEE README.**)

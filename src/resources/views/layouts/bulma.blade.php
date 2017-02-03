@@ -36,6 +36,7 @@
               <span></span>
             </span>
             <div class="nav-right nav-menu">
+                @stack('right-nav-menu')
                 @if (Auth::guest())
                     <a class="nav-item is-tab" href="{{ url('/login') }}">Login</a>
                     <a class="nav-item is-tab" href="{{ url('/register') }}">Register</a>

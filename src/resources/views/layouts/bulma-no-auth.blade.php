@@ -36,7 +36,7 @@
               <span></span>
             </span>
             <div class="nav-right nav-menu">
-                <!-- empty -->
+                @stack('right-nav-menu')
             </div>
           </div>
         </nav>
