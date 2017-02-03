@@ -4,6 +4,9 @@ All Notable changes to `laravel-bulma-starter` will be documented in this file.
 
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) principles.
 
+## 1.0.4 - 2017-02-03
+- Lang property of the `<html>` tag is taken out of config, mimicking Laravel 5.4.8
+
 ## 1.0.3 - 2017-02-01
 - Added a gitignore file
 
