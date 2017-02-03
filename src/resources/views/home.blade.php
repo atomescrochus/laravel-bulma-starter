@@ -1,4 +1,4 @@
-@extends('laravel-bulma-starter::layouts.app')
+@extends('laravel-bulma-starter::layouts.bulma')
 
 @section('content')
 <h1 class="title">Home</h1>
