@@ -11,7 +11,9 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Styles -->
+    @stack('styles-before')
     <link href="{{ mix('/css/app.css') }}" rel="stylesheet">
+    @stack('styles-after')
 
     <!-- Scripts -->
     <script>
