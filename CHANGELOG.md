@@ -4,6 +4,10 @@ All Notable changes to `laravel-bulma-starter` will be documented in this file.
 
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) principles.
 
+## 2.0.1 - 2017-02-03
+### Fixed
+- I forgot to push changes to the layout name to the templates. I was somewhere else I guess, it's fixed now!
+
 ## 2.0.0 - 2017-02-03
 ### Added
 - Added a layout file that you can extend that will not use the auth links in the menu
