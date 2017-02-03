@@ -1,4 +1,4 @@
-@extends('laravel-bulma-starter::layouts.app')
+@extends('laravel-bulma-starter::layouts.bulma')
 
 @section('content')
 @if (session('status'))
