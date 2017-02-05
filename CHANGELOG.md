@@ -4,6 +4,10 @@ All Notable changes to `laravel-bulma-starter` will be documented in this file.
 
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) principles.
 
+## 2.0.2 - 2017-02-05
+### Fixed
+- Link to home in the header is now working
+
 ## 2.0.1 - 2017-02-03
 ### Fixed
 - I forgot to push changes to the layout name to the templates. I was somewhere else I guess, it's fixed now!
