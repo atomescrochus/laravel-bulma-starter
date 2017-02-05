@@ -28,7 +28,7 @@
         <nav class="nav has-shadow">
           <div class="container">
             <div class="nav-left">
-              <a class="nav-item" {{ url('/') }}>
+              <a class="nav-item" href="{{ url('/') }}">
                 {{ config('app.name', 'Laravel') }}
               </a>
             </div>
