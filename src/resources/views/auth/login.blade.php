@@ -16,7 +16,7 @@
                 <div class="content">
                   <div class="control is-horizontal">
                       <div class="control-label">
-                        <label class="label">From</label>
+                        <label class="label">Email</label>
                       </div>
                       <div class="control is-fullwidth">
                         <input name="email" class="input{{ $errors->has('email') ? ' is-danger' : '' }}" type="email" value="{{ old('email') }}" required autofocus>
