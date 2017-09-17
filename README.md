@@ -26,7 +26,7 @@ Then, follow theses simple steps:
 
 1. Add `"bulma": "^0.3.1"` to your `package.json` file;
 2. Run `npm update`
-3. (If you don't want Boostrap anymore) Remove, or comment out the reference to `sass_bootstrap` and `variables` in your `resources/assets/sass/app.scss` file and from `resources/assets/js/bootstrap.js`.
+3. (If you don't want to use Bootstrap anymore) Remove, or comment out the reference to `sass_bootstrap` and `variables` in your `resources/assets/sass/app.scss` file and from `resources/assets/js/bootstrap.js`.
 4. Add `@import "node_modules/bulma/bulma";` to the `resources/assets/sass/app.scss` file
 5. Run `npm run [your-choice-of-env]` (the template files max uses of the `mix()` helper)
 
