@@ -4,6 +4,13 @@ All Notable changes to `laravel-bulma-starter` will be documented in this file.
 
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) principles.
 
+## 2.1.0 - 2017-09-18
+### Added
+- Support for Laravel >=5.5 package auto-discovery.
+
+### Fixed
+- Some typos (@MadMikeyB)
+
 ## 2.0.2 - 2017-02-05
 ### Fixed
 - Link to home in the header is now working
