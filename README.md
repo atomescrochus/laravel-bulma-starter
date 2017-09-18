@@ -12,7 +12,7 @@ Via Composer
 $ composer require atomescrochus/laravel-bulma-starter
 ```
 
-Then you have to install the package' service provider:
+Then you have to install the package' service provider, _unless you are running Laravel >=5.5_ (it'll use package auto-discovery). :
 
 ```php
 // config/app.php
