@@ -24,7 +24,7 @@
                 <div class="content">
                   <div class="control is-horizontal">
                       <div class="control-label">
-                        <label class="label">E-mail</label>
+                        <label class="label" for="email">E-mail</label>
                       </div>
                       <div class="control is-fullwidth">
                         <input name="email" class="input{{ $errors->has('email') ? ' is-danger' : '' }}" type="email" value="{{ old('email') }}" required autofocus>
@@ -34,7 +34,7 @@
 
                     <div class="control is-horizontal">
                       <div class="control-label">
-                        <label class="label">Password</label>
+                        <label class="label" for="password">Password</label>
                       </div>
                       <div class="control is-fullwidth">
                         <input name="password" class="input{{ $errors->has('password') ? ' is-danger' : '' }}" type="password" value="{{ old('password') }}" required>
@@ -44,7 +44,7 @@
 
                     <div class="control is-horizontal">
                       <div class="control-label">
-                        <label class="label">Confirm password</label>
+                        <label class="label" for="password_confirmation">Confirm password</label>
                       </div>
                       <div class="control is-fullwidth">
                         <input name="password_confirmation" class="input{{ $errors->has('password-confirm') ? ' is-danger' : '' }}" type="password" value="{{ old('password-confirm') }}" required>
