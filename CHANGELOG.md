@@ -4,6 +4,10 @@ All Notable changes to `laravel-bulma-starter` will be documented in this file.
 
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) principles.
 
+## Next
+### Fix
+- Made label clickables, by @Yamthief
+
 ## 2.1.1 - 2017-10-09
 ### Fix
 - Auto-discovery
